@@ -1,27 +1,31 @@
-package com.caeerdevs;
+package com.caeerdevs.vehicle;
 
+import com.caeerdevs.Engine;
+import com.caeerdevs.Passenger;
+
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Vehicle {
 
-    private Engine engine;
-    private String type;
+    protected Engine engine;
+    private final String type;
     private boolean isLand;
     private boolean isWater;
     private boolean isAir;
     private boolean isSpace;
-    private List<Passenger> passengers;
+    protected List<Passenger> passengers;
 
 
     public Vehicle(Engine engine, String type, boolean isLand, boolean isWater, boolean isAir,
-                   boolean isSpace, List<Passenger> passengers) {
+                   boolean isSpace) {
         this.engine = engine;
         this.type = type;
         this.isLand = isLand;
         this.isWater = isWater;
         this.isAir = isAir;
         this.isSpace = isSpace;
-        this.passengers = passengers;
+        this.passengers = new ArrayList<>();
     }
 
     public boolean turnOn(){
@@ -38,6 +42,13 @@ public abstract class Vehicle {
 
     public void removePassenger(Passenger name){
         passengers.remove(name);
+    }
+
+    public int getTotalWeight(){
+        int totalWeight=0;
+        for(Passenger passenger : passengers)
+            totalWeight+=passenger.weight;
+        return totalWeight;
     }
 
     @Override

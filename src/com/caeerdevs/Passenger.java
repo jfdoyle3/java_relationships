@@ -2,8 +2,9 @@ package com.caeerdevs;
 
 public class Passenger {
 
+
     private String name;
-    private int weight;
+    public int weight;
 
     public Passenger(String name, int weight) {
         this.name = name;
