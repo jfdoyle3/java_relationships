@@ -44,12 +44,7 @@ public abstract class Vehicle {
         passengers.remove(name);
     }
 
-    public int getTotalWeight(){
-        int totalWeight=0;
-        for(Passenger passenger : passengers)
-            totalWeight+=passenger.weight;
-        return totalWeight;
-    }
+
 
     @Override
     public String toString() {
@@ -60,7 +55,7 @@ public abstract class Vehicle {
                 ", isWater=" + isWater +
                 ", isAir=" + isAir +
                 ", isSpace=" + isSpace +
-                ", passengers=" + passengers +
+                ", passengers=" + passengers.size() +
                 '}';
     }
 }

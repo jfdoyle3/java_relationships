@@ -19,7 +19,7 @@ public class Main {
 
         List<Tire> carTires = new ArrayList<>();
         List<Passenger> passengers=new ArrayList<>();
-
+       // passengers.add(new Passenger("Sam", 118));
         for (int i = 0; i < 4; i++) {
             carTires.add(new Tire(27, 25));
             passengers.add(new Passenger("Sam", 118));
@@ -27,7 +27,7 @@ public class Main {
 
         Vehicle car = new Car(gasEngine,carTires);
 
-        System.out.println(car);
+        System.out.println();
 
 
     }

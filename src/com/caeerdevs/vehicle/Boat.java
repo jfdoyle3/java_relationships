@@ -17,9 +17,9 @@ public class Boat extends Vehicle {
 
     private void setMaxLoad(int maxLoad) {
 
-        if (getTotalWeight() > maxLoad)
-            return;
-        else
-            this.maxLoad = maxLoad;
+//        if ( > maxLoad)
+//            return;
+//        else
+//            this.maxLoad = maxLoad;
     }
 }

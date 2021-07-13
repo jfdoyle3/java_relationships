@@ -1,7 +1,6 @@
 package com.caeerdevs.vehicle;
 
 import com.caeerdevs.Engine;
-import com.caeerdevs.vehicle.Vehicle;
 
 public class Plane extends Vehicle {
 
